@@ -1,30 +1,26 @@
 ---
-import Logo from '../components/Logo.astro';
-
-const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' }
-];
+import Logo from "./Logo.astro";
 ---
 
-<nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
-    <a href="/">
-        <Logo />
-    </a>
-    {
-        !!navItems?.length && (
-            <ul class="flex flex-wrap gap-x-4 gap-y-1">
-                {navItems.map((item) => (
-                    <li>
-                        <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
-                            {item.linkText}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        )
-    }
-</nav>
+<header class="header">
+  <div class="container header-inner">
+    <div>
+      <Logo />
+    </div>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#profesionales">Profesionales</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacto">Contacto</a>
+      <a href="/politica-de-privacidad">Legal</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Cambia este link cuando tengas el enlace real de App Store -->
+      <a class="btn btn-small btn-ghost" href="#descargar">Descargar app</a>
+      <a class="btn btn-small btn-primary" href="#profesionales">Soy profesional</a>
+    </div>
+  </div>
+</header>
