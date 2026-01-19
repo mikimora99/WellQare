@@ -3,203 +3,311 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-  title="WellQare | Salud cerca de ti"
-  description="Encuentra profesionales verificados cerca de ti. Reserva fácil, atención clara y una experiencia sencilla."
+  title="WellQare | Tu salud, a un clic"
+  description="Conecta con profesionales sanitarios verificados. Reserva citas, videoconsultas y accede a servicios cerca de ti."
 >
-  <section class="hero">
-    <div class="container hero-wrap">
-      <div>
-        <div class="kicker">📍 Cerca de ti · ✅ Profesionales verificados · ⚡ Reserva fácil</div>
-
-        <h1 style="margin-top:14px">
-          La forma más simple de encontrar y reservar
-          <span style="background:linear-gradient(90deg,var(--primary),var(--primary2));-webkit-background-clip:text;background-clip:text;color:transparent">
-            salud de confianza
-          </span>
-          cerca de ti.
-        </h1>
-
-        <p style="margin-top:8px">
-          WellQare conecta pacientes con profesionales y proveedores del ámbito de la salud.
-          Búsqueda por cercanía, perfiles claros y una experiencia rápida.
-        </p>
-
-        <div class="hero-cta" id="descargar">
-          <!-- Cambia el href por tu enlace real de App Store cuando lo tengas -->
-          <a class="btn btn-primary" href="#">Descargar en App Store</a>
-          <a class="btn btn-ghost" href="#profesionales">Soy profesional</a>
-        </div>
-
-        <div class="badges">
-          <span class="badge">🗺️ Mapa y cercanía</span>
-          <span class="badge">💬 Experiencia sencilla</span>
-          <span class="badge">🎁 Beneficios y fidelización</span>
-        </div>
-      </div>
-
-      <aside class="card side-card">
-        <h3>Qué puedes hacer en WellQare</h3>
-        <ul>
-          <li>Descubrir profesionales cercanos</li>
-          <li>Reservar en pocos pasos</li>
-          <li>Gestionar citas y seguimiento</li>
-          <li>Acceder a ventajas y beneficios</li>
-        </ul>
-        <div class="divider"></div>
-        <p class="small">
-          ¿Eres profesional o proveedor? Tendrás un panel para gestionar tu perfil, servicios y disponibilidad (cuando lo activemos en web).
-        </p>
-      </aside>
-    </div>
-  </section>
-
-  <section class="section" id="funcionalidades">
+  <!-- HERO -->
+  <section class="hero" id="reservar">
     <div class="container">
-      <h2>Funcionalidades principales</h2>
-      <p>Lo importante: claridad, cercanía y una experiencia sin complicaciones.</p>
+      <div class="hero-grid">
+        <div>
+          <div class="pill">
+            <span aria-hidden="true">🛡️</span>
+            Profesionales verificados
+          </div>
 
-      <div class="grid grid-3" style="margin-top:16px">
-        <div class="card">
-          <h3>🧭 Búsqueda por cercanía</h3>
-          <p>Encuentra profesionales según tu ubicación y disponibilidad, con una navegación simple.</p>
+          <h1>
+            Tu salud, <span class="accent">a un clic</span>
+          </h1>
+
+          <p>
+            Conecta con profesionales de la salud verificados.
+            Fisioterapeutas, psicólogos, nutricionistas y más, disponibles para ti cuando los necesites.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#servicios">
+              <!-- icon -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M8 7V5m8 2V5M4 10h16M6 21h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2Z"
+                  stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              Reservar cita
+            </a>
+
+            <a class="btn btn-outline" href="#profesionales">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="#1677ff" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="9" cy="7" r="4" stroke="#1677ff" stroke-width="2"/>
+                <path d="M20 8v6m3-3h-6" stroke="#1677ff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              Ver profesionales
+            </a>
+          </div>
+
+          <div class="stats">
+            <div>
+              <div class="stat-num">500+</div>
+              <div class="stat-label">Profesionales</div>
+            </div>
+            <div>
+              <div class="stat-num">10k+</div>
+              <div class="stat-label">Pacientes</div>
+            </div>
+            <div>
+              <div class="stat-num">4.9</div>
+              <div class="stat-label">Valoración</div>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>📅 Reserva rápida</h3>
-          <p>Selecciona servicio, franja y confirma en pocos pasos.</p>
+
+        <div>
+          <div class="hero-image">
+            <!-- IMPORTANTE: sube tu imagen a public/images/hero.jpg -->
+            <img src="/images/hero.jpg" alt="Profesionales de la salud" loading="eager" />
+
+            <div class="hero-float">
+              <div class="float-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M15 10l4.5-4.5A2.1 2.1 0 0 1 22 7v10a2.1 2.1 0 0 1-2.5 1.5L15 16v-6Z" fill="#1677ff" opacity=".12"/>
+                  <path d="M4 8h9a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H4V8Z" stroke="#1677ff" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M15 10l5-4v12l-5-4v-4Z" stroke="#1677ff" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <div class="float-title">Videoconsultas</div>
+                <div class="float-sub">Atención inmediata</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>🛡️ Confianza y verificación</h3>
-          <p>Perfiles con información clara y procesos de validación para mejorar la confianza.</p>
-        </div>
-        <div class="card">
-          <h3>🎁 WellQare+</h3>
-          <p>Beneficios y recompensas para impulsar recurrencia y fidelización.</p>
-        </div>
-        <div class="card">
-          <h3>🤝 Referidos</h3>
-          <p>Invita y gana: un sistema pensado para crecer con confianza.</p>
-        </div>
-        <div class="card">
-          <h3>🧩 Marketplace (cuando toque)</h3>
-          <p>Compra de productos/servicios relacionados (si lo activas más adelante).</p>
-        </div>
-      </div>
+      </div><!-- hero-grid -->
     </div>
   </section>
 
-  <section class="section" id="como-funciona">
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
     <div class="container">
-      <h2>Cómo funciona</h2>
-      <p>Un flujo simple para usuarios. Y escalable para ti.</p>
+      <h2 class="section-title">Servicios de Salud</h2>
+      <p class="section-subtitle">
+        Encuentra el profesional que necesitas para cuidar de tu salud y bienestar
+      </p>
 
-      <div class="grid grid-3" style="margin-top:16px">
-        <div class="card">
-          <h3>1) Descubre</h3>
-          <p>Explora profesionales cercanos según tu necesidad.</p>
+      <div class="services-grid">
+        <!-- Fisioterapia -->
+        <div class="card service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">📈</div>
+            <div class="service-price">30-60€</div>
+          </div>
+          <div class="service-name">Fisioterapia</div>
+          <div class="service-desc">Tratamiento y rehabilitación física</div>
         </div>
-        <div class="card">
-          <h3>2) Reserva</h3>
-          <p>Elige servicio, horario y confirma.</p>
+
+        <!-- Psicología -->
+        <div class="card service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">🧠</div>
+            <div class="service-price">45-65€</div>
+          </div>
+          <div class="service-name">Psicología</div>
+          <div class="service-desc">Apoyo y salud mental</div>
         </div>
-        <div class="card">
-          <h3>3) Repite</h3>
-          <p>Seguimiento + beneficios WellQare+ para mejorar recurrencia.</p>
+
+        <!-- Quiropráctica -->
+        <div class="card service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">🦴</div>
+            <div class="service-price">20-80€</div>
+          </div>
+          <div class="service-name">Quiropráctica</div>
+          <div class="service-desc">Alineación y bienestar corporal</div>
+        </div>
+
+        <!-- Logopedia -->
+        <div class="card service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">💬</div>
+            <div class="service-price">30-50€</div>
+          </div>
+          <div class="service-name">Logopedia</div>
+          <div class="service-desc">Terapia del habla y lenguaje</div>
+        </div>
+
+        <!-- Nutrición -->
+        <div class="card service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">🍏</div>
+            <div class="service-price">25-80€</div>
+          </div>
+          <div class="service-name">Nutrición</div>
+          <div class="service-desc">Planes alimenticios personalizados</div>
+        </div>
+
+        <!-- Podología -->
+        <div class="card service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">🦶</div>
+            <div class="service-price">35-60€</div>
+          </div>
+          <div class="service-name">Podología</div>
+          <div class="service-desc">Cuidado integral de los pies</div>
+        </div>
+
+        <!-- Veterinaria -->
+        <div class="card service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">💗</div>
+            <div class="service-price">Desde 30€</div>
+          </div>
+          <div class="service-name">Veterinaria</div>
+          <div class="service-desc">Salud para tus mascotas</div>
+        </div>
+
+        <!-- Extra (puedes cambiarlo por otro servicio) -->
+        <div class="card service-card" id="tienda">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">🛍️</div>
+            <div class="service-price">Tienda</div>
+          </div>
+          <div class="service-name">Productos recomendados</div>
+          <div class="service-desc">Artículos de salud recomendados por expertos</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CÓMO FUNCIONA -->
   <section class="section" id="profesionales">
     <div class="container">
-      <h2>Para profesionales y proveedores</h2>
-      <p>Una forma clara de captar pacientes cerca de ti y gestionar tu presencia.</p>
+      <h2 class="section-title">¿Cómo funciona WELLQARE?</h2>
+      <p class="section-subtitle">
+        Una plataforma completa diseñada para facilitar tu acceso a servicios de salud
+      </p>
 
-      <div class="grid grid-2" style="margin-top:16px">
-        <div class="card">
-          <h3>Panel de gestión (fase siguiente)</h3>
-          <p>
-            Cuando lo activemos en web, podrás gestionar perfil, servicios, disponibilidad, y ventajas.
-            La app ya tiene tu base (roles, functions, etc.), así que la web irá conectada al mismo sistema.
-          </p>
-          <div class="divider"></div>
-          <p class="small">
-            Si quieres, aquí puedes poner un formulario de alta para profesionales (lo añadimos en el siguiente paso).
-          </p>
+      <div class="how-grid">
+        <div class="card how-card">
+          <div class="service-icon" aria-hidden="true">📅</div>
+          <div class="how-title">Reserva tu cita</div>
+          <div class="how-desc">
+            Elige el horario que mejor se adapte a ti. Disponibilidad en tiempo real.
+          </div>
         </div>
 
-        <div class="card">
-          <h3>¿Quieres colaborar?</h3>
-          <p>
-            Déjanos tu contacto y te avisamos cuando abramos el acceso al panel.
-          </p>
+        <div class="card how-card">
+          <div class="service-icon" aria-hidden="true">🎥</div>
+          <div class="how-title">Videoconsultas</div>
+          <div class="how-desc">
+            Primera consulta por videollamada. Atención profesional desde casa.
+          </div>
+        </div>
 
-          <!-- Formulario simple (sin backend) -->
-          <form name="contacto-pro" method="POST" data-netlify="true" style="margin-top:12px">
-            <input type="hidden" name="form-name" value="contacto-pro" />
-            <div class="grid" style="gap:10px">
-              <input name="nombre" placeholder="Nombre" required
-                style="padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text)" />
-              <input name="email" type="email" placeholder="Email" required
-                style="padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text)" />
-              <input name="especialidad" placeholder="Especialidad / servicio"
-                style="padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text)" />
-              <button class="btn btn-primary" type="submit">Quiero acceso</button>
-            </div>
-            <p class="small" style="margin-top:10px">
-              Al enviar aceptas nuestra <a href="/politica-de-privacidad" style="text-decoration:underline;text-underline-offset:3px">política de privacidad</a>.
-            </p>
-          </form>
+        <div class="card how-card">
+          <div class="service-icon" aria-hidden="true">📄</div>
+          <div class="how-title">Historial médico</div>
+          <div class="how-desc">
+            Tu ficha técnica segura y accesible para los profesionales que elijas.
+          </div>
+        </div>
+
+        <div class="card how-card">
+          <div class="service-icon" aria-hidden="true">📦</div>
+          <div class="how-title">Compras integradas</div>
+          <div class="how-desc">
+            Recibe tus recetas y medicamentos directamente en casa.
+          </div>
+        </div>
+
+        <div class="card how-card">
+          <div class="service-icon" aria-hidden="true">🕒</div>
+          <div class="how-title">Disponibilidad 24/7</div>
+          <div class="how-desc">
+            Accede a profesionales en cualquier momento que los necesites.
+          </div>
+        </div>
+
+        <div class="card how-card">
+          <div class="service-icon" aria-hidden="true">🛡️</div>
+          <div class="how-title">100% Seguro</div>
+          <div class="how-desc">
+            Profesionales verificados y pagos protegidos en toda la plataforma.
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FAQ -->
   <section class="section" id="faq">
     <div class="container">
-      <h2>Preguntas frecuentes</h2>
-      <p>Respuestas cortas y claras para lo más común.</p>
+      <h2 class="section-title">Preguntas Frecuentes</h2>
+      <p class="section-subtitle">
+        Encuentra respuestas a las dudas más comunes sobre Wellcare
+      </p>
 
-      <div class="faq" style="margin-top:14px">
-        <details>
-          <summary>¿WellQare es una clínica?</summary>
-          <p class="small" style="margin-top:10px">
-            No. WellQare es una plataforma para descubrir y conectar con profesionales/proveedores del ámbito de la salud.
-          </p>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>¿Qué es Wellcare?</summary>
+          <div class="faq-answer">
+            Wellcare es una plataforma integral de salud y bienestar que conecta a pacientes con profesionales sanitarios cualificados y ofrece una tienda de productos de salud recomendados por expertos. Facilitamos el acceso a servicios de fisioterapia, psicología, nutrición y más, además de videoconsultas.
+          </div>
         </details>
 
-        <details>
-          <summary>¿Cómo se verifica a un profesional?</summary>
-          <p class="small" style="margin-top:10px">
-            Depende del servicio. Se revisa información y documentación según el proceso que tengas definido.
-          </p>
+        <details class="faq-item">
+          <summary>¿En qué se diferencia Wellcare de otras plataformas?</summary>
+          <div class="faq-answer">
+            Wellcare combina servicios profesionales de salud con una tienda especializada en un solo lugar. Verificamos a todos nuestros profesionales, ofrecemos videoconsultas, historial médico privado, sistema de valoraciones transparente y productos de calidad recomendados por especialistas. Además, nuestro sistema de geolocalización te permite encontrar profesionales cerca de ti.
+          </div>
         </details>
 
-        <details>
-          <summary>¿Qué es WellQare+?</summary>
-          <p class="small" style="margin-top:10px">
-            Un sistema de beneficios pensado para premiar recurrencia y referencias.
-          </p>
+        <details class="faq-item">
+          <summary>¿Wellcare es una tienda o una app para servicios médicos?</summary>
+          <div class="faq-answer">
+            Wellcare es ambas cosas. Somos una plataforma completa que te permite reservar citas presenciales y videoconsultas con profesionales de la salud (fisioterapeutas, psicólogos, nutricionistas, etc.), gestionar tu historial médico de forma segura, y comprar productos de salud y bienestar recomendados por estos profesionales.
+          </div>
         </details>
 
-        <details>
-          <summary>¿Dónde puedo leer las políticas legales?</summary>
-          <p class="small" style="margin-top:10px">
-            En el footer: Aviso legal, Política de privacidad y Política de cookies.
-          </p>
+        <details class="faq-item">
+          <summary>¿Qué gano al registrarme?</summary>
+          <div class="faq-answer">
+            Al registrarte en Wellcare puedes gestionar tus citas fácilmente, acceder a videoconsultas desde casa, mantener tu historial médico privado, compartirlo con profesionales cuando lo necesites, guardar profesionales favoritos, recibir recomendaciones personalizadas, y disfrutar de ofertas exclusivas en productos de la tienda.
+          </div>
         </details>
-      </div>
-    </div>
-  </section>
 
-  <section class="section" id="contacto">
-    <div class="container">
-      <div class="card">
-        <h2>Contacto</h2>
-        <p>¿Tienes dudas? Escríbenos y te respondemos lo antes posible.</p>
-        <div class="divider"></div>
-        <p class="small">
-          Email: <a href="mailto:soporte@wellqare.com" style="text-decoration:underline;text-underline-offset:3px">soporte@wellqare.com</a>
-        </p>
+        <details class="faq-item">
+          <summary>¿Cuesta dinero registrarse?</summary>
+          <div class="faq-answer">
+            No, el registro en Wellcare es completamente gratuito. Solo pagas por los servicios profesionales que reserves (citas presenciales o videoconsultas) o los productos que compres. No hay cuotas de membresía ni costes ocultos.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué tipo de servicios puedo encontrar?</summary>
+          <div class="faq-answer">
+            En Wellcare encontrarás una amplia variedad de servicios de salud: fisioterapia, psicología, nutrición, podología, quiropráctica, masajes terapéuticos, y muchos más. Todos nuestros profesionales están verificados y cuentan con las certificaciones necesarias. Puedes elegir entre citas presenciales, servicios a domicilio o videoconsultas.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cómo funcionan las videoconsultas?</summary>
+          <div class="faq-answer">
+            Las videoconsultas te permiten conectar con profesionales de la salud desde la comodidad de tu hogar. Una vez reservada tu cita, recibirás acceso a la sala de videollamada donde podrás hablar con tu profesional en tiempo real, con video y audio de alta calidad.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Mi historial médico es privado?</summary>
+          <div class="faq-answer">
+            Sí, tu historial médico es completamente privado y seguro. Solo tú puedes acceder a él, y puedes elegir compartirlo con profesionales específicos cuando agendes una cita. Los profesionales solo verán tu información si tú lo autorizas expresamente.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Puedo anular mi cuenta en algún momento?</summary>
+          <div class="faq-answer">
+            Sí, puedes anular tu cuenta en cualquier momento desde la configuración de tu perfil. Tus datos serán eliminados de acuerdo con nuestra política de privacidad. Si tienes citas programadas, te recomendamos cancelarlas antes de cerrar tu cuenta.
+          </div>
+        </details>
       </div>
     </div>
   </section>
