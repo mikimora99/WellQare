@@ -2,29 +2,93 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Aviso legal | WellQare" description="Aviso legal de WellQare.">
+<Layout title="Aviso Legal - Wellqare" description="Aviso legal y condiciones de uso de Wellqare.">
   <section class="section">
     <div class="container">
-      <h2 class="section-title" style="text-align:left">Aviso legal</h2>
+      <h2 class="section-title" style="text-align:left">Aviso Legal</h2>
       <p class="section-subtitle" style="text-align:left; max-width:900px">
-        Texto provisional. Recomendación: revisa con tu asesor legal antes de publicar.
+        Última actualización: Enero 2026
       </p>
 
       <div class="hr"></div>
 
-      <div class="card" style="padding:22px">
-        <p><strong>Responsable:</strong> [TU EMPRESA / AUTÓNOMO]</p>
-        <p><strong>NIF/CIF:</strong> [____]</p>
-        <p><strong>Domicilio:</strong> [____]</p>
-        <p><strong>Email:</strong> soporte@wellqare.com</p>
-
-        <div class="hr"></div>
-
+      <article class="card legal" style="padding:22px">
+        <h3>1. Información general</h3>
         <p>
-          El presente sitio web tiene carácter informativo sobre WellQare.
-          El uso del sitio implica la aceptación de este aviso legal.
+          En cumplimiento de la Ley 34/2002, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE),
+          se informa a los usuarios de los datos identificativos del titular de este sitio web:
         </p>
-      </div>
+
+        <ul>
+          <li><strong>Empresa:</strong> Wellqare App S.L.</li>
+          <li><strong>CIF:</strong> [Tu CIF]</li>
+          <li><strong>Domicilio social:</strong> [Tu dirección fiscal]</li>
+          <li><strong>Correo electrónico:</strong> <a href="mailto:privacidad@wellqareapp.com">privacidad@wellqareapp.com</a></li>
+        </ul>
+
+        <h3>2. Objeto</h3>
+        <p>
+          Este sitio web tiene como objeto proporcionar información sobre Wellqare, sus servicios y funcionalidades.
+          En su caso, podrá incluir formularios de contacto para solicitudes de información.
+        </p>
+
+        <h3>3. Condiciones de uso</h3>
+        <p>
+          El acceso y uso de este sitio web atribuye la condición de usuario e implica la aceptación de este aviso legal.
+          El usuario se compromete a realizar un uso adecuado del sitio web y a no emplearlo para actividades ilícitas.
+        </p>
+
+        <h3>4. Propiedad intelectual e industrial</h3>
+        <p>
+          Todos los contenidos del sitio web (textos, marcas, logotipos, imágenes, diseño, código fuente, etc.) son titularidad de Wellqare App S.L.
+          o de terceros autorizados, quedando prohibida su reproducción, distribución o comunicación pública sin autorización expresa.
+        </p>
+
+        <h3>5. Responsabilidad</h3>
+        <p>
+          Wellqare no se hace responsable de los daños o perjuicios derivados de interferencias, virus, averías telefónicas o desconexiones
+          del sistema operativo motivadas por causas ajenas.
+        </p>
+        <p>
+          Wellqare podrá modificar, suspender o interrumpir el contenido del sitio web en cualquier momento sin necesidad de previo aviso.
+        </p>
+
+        <h3>6. Enlaces a terceros</h3>
+        <p>
+          Este sitio web podría contener enlaces a páginas externas. Wellqare no se responsabiliza del contenido, políticas o prácticas
+          de dichos sitios de terceros.
+        </p>
+
+        <h3>7. Protección de datos</h3>
+        <p>
+          El tratamiento de datos personales se rige por nuestra
+          <a href="/politica-de-privacidad">Política de Privacidad</a> y, en su caso, por nuestra
+          <a href="/politica-de-cookies">Política de Cookies</a>.
+        </p>
+
+        <h3>8. Legislación aplicable y jurisdicción</h3>
+        <p>
+          Este aviso legal se rige por la legislación española. Para cualquier controversia, las partes se someten, con renuncia expresa a cualquier otro fuero,
+          a los Juzgados y Tribunales del domicilio del usuario cuando éste tenga la consideración de consumidor; en caso contrario, a los del domicilio del titular.
+        </p>
+
+        <div class="contact-box">
+          <h4>Contacto</h4>
+          <p>Para cualquier consulta legal:</p>
+          <p style="margin-top:8px">📧 <a href="mailto:privacidad@wellqareapp.com">privacidad@wellqareapp.com</a></p>
+        </div>
+      </article>
     </div>
   </section>
+
+  <style>
+    .legal p { margin: 0 0 12px; }
+    .legal h3 { margin: 22px 0 10px; font-size: 20px; font-weight: 900; color: #0f172a; }
+    .legal ul { margin: 8px 0 14px 18px; color: #64748b; line-height: 1.7; }
+    .legal li { margin: 6px 0; }
+    .legal a { color: #1677ff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+    .contact-box { margin-top: 18px; border-radius: 16px; padding: 16px; background: #f8fafc; border: 1px solid #e2e8f0; text-align: center; }
+    .contact-box h4 { margin: 0 0 8px; font-size: 16px; }
+  </style>
 </Layout>
