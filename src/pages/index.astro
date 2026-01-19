@@ -1,23 +1,206 @@
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import ServicesGrid from "@/components/ServicesGrid";
-import FeaturesSection from "@/components/FeaturesSection";
-import FAQSection from "@/components/FAQSection";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
+---
+import Layout from "../layouts/Layout.astro";
+---
 
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <ServicesGrid />
-        <FeaturesSection />
-        <FAQSection />
-        <CTASection />
-      </main>
-      <Footer />
+<Layout
+  title="WellQare | Salud cerca de ti"
+  description="Encuentra profesionales verificados cerca de ti. Reserva fácil, atención clara y una experiencia sencilla."
+>
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <div class="kicker">📍 Cerca de ti · ✅ Profesionales verificados · ⚡ Reserva fácil</div>
+
+        <h1 style="margin-top:14px">
+          La forma más simple de encontrar y reservar
+          <span style="background:linear-gradient(90deg,var(--primary),var(--primary2));-webkit-background-clip:text;background-clip:text;color:transparent">
+            salud de confianza
+          </span>
+          cerca de ti.
+        </h1>
+
+        <p style="margin-top:8px">
+          WellQare conecta pacientes con profesionales y proveedores del ámbito de la salud.
+          Búsqueda por cercanía, perfiles claros y una experiencia rápida.
+        </p>
+
+        <div class="hero-cta" id="descargar">
+          <!-- Cambia el href por tu enlace real de App Store cuando lo tengas -->
+          <a class="btn btn-primary" href="#">Descargar en App Store</a>
+          <a class="btn btn-ghost" href="#profesionales">Soy profesional</a>
+        </div>
+
+        <div class="badges">
+          <span class="badge">🗺️ Mapa y cercanía</span>
+          <span class="badge">💬 Experiencia sencilla</span>
+          <span class="badge">🎁 Beneficios y fidelización</span>
+        </div>
+      </div>
+
+      <aside class="card side-card">
+        <h3>Qué puedes hacer en WellQare</h3>
+        <ul>
+          <li>Descubrir profesionales cercanos</li>
+          <li>Reservar en pocos pasos</li>
+          <li>Gestionar citas y seguimiento</li>
+          <li>Acceder a ventajas y beneficios</li>
+        </ul>
+        <div class="divider"></div>
+        <p class="small">
+          ¿Eres profesional o proveedor? Tendrás un panel para gestionar tu perfil, servicios y disponibilidad (cuando lo activemos en web).
+        </p>
+      </aside>
     </div>
-  );
-};
+  </section>
+
+  <section class="section" id="funcionalidades">
+    <div class="container">
+      <h2>Funcionalidades principales</h2>
+      <p>Lo importante: claridad, cercanía y una experiencia sin complicaciones.</p>
+
+      <div class="grid grid-3" style="margin-top:16px">
+        <div class="card">
+          <h3>🧭 Búsqueda por cercanía</h3>
+          <p>Encuentra profesionales según tu ubicación y disponibilidad, con una navegación simple.</p>
+        </div>
+        <div class="card">
+          <h3>📅 Reserva rápida</h3>
+          <p>Selecciona servicio, franja y confirma en pocos pasos.</p>
+        </div>
+        <div class="card">
+          <h3>🛡️ Confianza y verificación</h3>
+          <p>Perfiles con información clara y procesos de validación para mejorar la confianza.</p>
+        </div>
+        <div class="card">
+          <h3>🎁 WellQare+</h3>
+          <p>Beneficios y recompensas para impulsar recurrencia y fidelización.</p>
+        </div>
+        <div class="card">
+          <h3>🤝 Referidos</h3>
+          <p>Invita y gana: un sistema pensado para crecer con confianza.</p>
+        </div>
+        <div class="card">
+          <h3>🧩 Marketplace (cuando toque)</h3>
+          <p>Compra de productos/servicios relacionados (si lo activas más adelante).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <h2>Cómo funciona</h2>
+      <p>Un flujo simple para usuarios. Y escalable para ti.</p>
+
+      <div class="grid grid-3" style="margin-top:16px">
+        <div class="card">
+          <h3>1) Descubre</h3>
+          <p>Explora profesionales cercanos según tu necesidad.</p>
+        </div>
+        <div class="card">
+          <h3>2) Reserva</h3>
+          <p>Elige servicio, horario y confirma.</p>
+        </div>
+        <div class="card">
+          <h3>3) Repite</h3>
+          <p>Seguimiento + beneficios WellQare+ para mejorar recurrencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="profesionales">
+    <div class="container">
+      <h2>Para profesionales y proveedores</h2>
+      <p>Una forma clara de captar pacientes cerca de ti y gestionar tu presencia.</p>
+
+      <div class="grid grid-2" style="margin-top:16px">
+        <div class="card">
+          <h3>Panel de gestión (fase siguiente)</h3>
+          <p>
+            Cuando lo activemos en web, podrás gestionar perfil, servicios, disponibilidad, y ventajas.
+            La app ya tiene tu base (roles, functions, etc.), así que la web irá conectada al mismo sistema.
+          </p>
+          <div class="divider"></div>
+          <p class="small">
+            Si quieres, aquí puedes poner un formulario de alta para profesionales (lo añadimos en el siguiente paso).
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>¿Quieres colaborar?</h3>
+          <p>
+            Déjanos tu contacto y te avisamos cuando abramos el acceso al panel.
+          </p>
+
+          <!-- Formulario simple (sin backend) -->
+          <form name="contacto-pro" method="POST" data-netlify="true" style="margin-top:12px">
+            <input type="hidden" name="form-name" value="contacto-pro" />
+            <div class="grid" style="gap:10px">
+              <input name="nombre" placeholder="Nombre" required
+                style="padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text)" />
+              <input name="email" type="email" placeholder="Email" required
+                style="padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text)" />
+              <input name="especialidad" placeholder="Especialidad / servicio"
+                style="padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text)" />
+              <button class="btn btn-primary" type="submit">Quiero acceso</button>
+            </div>
+            <p class="small" style="margin-top:10px">
+              Al enviar aceptas nuestra <a href="/politica-de-privacidad" style="text-decoration:underline;text-underline-offset:3px">política de privacidad</a>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <h2>Preguntas frecuentes</h2>
+      <p>Respuestas cortas y claras para lo más común.</p>
+
+      <div class="faq" style="margin-top:14px">
+        <details>
+          <summary>¿WellQare es una clínica?</summary>
+          <p class="small" style="margin-top:10px">
+            No. WellQare es una plataforma para descubrir y conectar con profesionales/proveedores del ámbito de la salud.
+          </p>
+        </details>
+
+        <details>
+          <summary>¿Cómo se verifica a un profesional?</summary>
+          <p class="small" style="margin-top:10px">
+            Depende del servicio. Se revisa información y documentación según el proceso que tengas definido.
+          </p>
+        </details>
+
+        <details>
+          <summary>¿Qué es WellQare+?</summary>
+          <p class="small" style="margin-top:10px">
+            Un sistema de beneficios pensado para premiar recurrencia y referencias.
+          </p>
+        </details>
+
+        <details>
+          <summary>¿Dónde puedo leer las políticas legales?</summary>
+          <p class="small" style="margin-top:10px">
+            En el footer: Aviso legal, Política de privacidad y Política de cookies.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="card">
+        <h2>Contacto</h2>
+        <p>¿Tienes dudas? Escríbenos y te respondemos lo antes posible.</p>
+        <div class="divider"></div>
+        <p class="small">
+          Email: <a href="mailto:soporte@wellqare.com" style="text-decoration:underline;text-underline-offset:3px">soporte@wellqare.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
