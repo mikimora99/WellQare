@@ -2,21 +2,38 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Política de Cookies | WellQare" description="Política de cookies de WellQare.">
-  <main class="container section">
-    <h1>Política de Cookies</h1>
-    <p class="small">Texto provisional. Revisa con tu asesor legal antes de publicar.</p>
-
-    <div class="card" style="margin-top:16px">
-      <p>
-        Una cookie es un pequeño archivo que se almacena en tu dispositivo para mejorar la experiencia del usuario.
+<Layout title="Política de cookies | WellQare" description="Política de cookies de WellQare.">
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" style="text-align:left">Política de cookies</h2>
+      <p class="section-subtitle" style="text-align:left; max-width:900px">
+        Texto provisional. Recomendación: revisa con tu asesor legal antes de publicar.
       </p>
 
-      <div class="divider"></div>
+      <div class="hr"></div>
 
-      <p><strong>Tipos:</strong> técnicas, analíticas y de personalización (si aplican).</p>
-      <p><strong>Gestión:</strong> puedes aceptar o rechazar desde el banner.</p>
-      <p><strong>Actualizaciones:</strong> esta política puede actualizarse si incorporamos nuevas cookies.</p>
+      <div class="card" style="padding:22px">
+        <p>
+          Las cookies son pequeños archivos que se almacenan en tu dispositivo para mejorar la experiencia
+          del usuario, analizar el tráfico o personalizar contenido (si aplica).
+        </p>
+
+        <div class="hr"></div>
+
+        <p><strong>Tipos habituales:</strong></p>
+        <ul style="color:#64748b; line-height:1.7; margin-top:8px">
+          <li><strong>Técnicas:</strong> necesarias para el funcionamiento.</li>
+          <li><strong>Analíticas:</strong> medición y estadísticas (GA4, etc.).</li>
+          <li><strong>Marketing:</strong> publicidad y remarketing (Meta Pixel, etc.).</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <p>
+          Puedes aceptar o rechazar cookies desde el banner. Si más adelante instalas analítica/píxeles,
+          habrá que actualizar esta política con el listado de cookies y proveedores.
+        </p>
+      </div>
     </div>
-  </main>
+  </section>
 </Layout>
