@@ -1,0 +1,61 @@
+<div id="cookie-banner" class="cookie-banner card" role="dialog" aria-live="polite">
+  <div>
+    <div style="font-weight:1000;color:rgba(255,255,255,.92)">Cookies</div>
+    <p class="small" style="margin:6px 0 0">
+      Usamos cookies para mejorar tu experiencia. Puedes aceptar o rechazar.
+      <a href="/politica-de-cookies" style="text-decoration:underline;text-underline-offset:3px">Ver política de cookies</a>.
+    </p>
+  </div>
+
+  <div class="cookie-actions">
+    <button class="btn btn-ghost btn-small" data-cookie="reject" type="button">Rechazar</button>
+    <button class="btn btn-primary btn-small" data-cookie="accept" type="button">Aceptar</button>
+  </div>
+</div>
+
+<style>
+  .cookie-banner{
+    position: fixed;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    z-index: 9999;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cookie-actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  @media (max-width: 720px){
+    .cookie-banner{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<script is:inline>
+  const KEY = "wellqare_cookie_consent";
+  const banner = document.getElementById("cookie-banner");
+  const saved = localStorage.getItem(KEY);
+
+  if (saved && banner) {
+    banner.style.display = "none";
+  }
+
+  banner?.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-cookie]");
+    if (!btn) return;
+
+    const v = btn.getAttribute("data-cookie") === "accept" ? "accepted" : "rejected";
+    localStorage.setItem(KEY, v);
+
+    banner.style.display = "none";
+  });
+</script>
