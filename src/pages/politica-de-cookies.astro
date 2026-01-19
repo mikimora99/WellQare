@@ -2,38 +2,77 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Política de cookies | WellQare" description="Política de cookies de WellQare.">
+<Layout title="Política de Cookies - Wellqare" description="Política de cookies de Wellqare.">
   <section class="section">
     <div class="container">
-      <h2 class="section-title" style="text-align:left">Política de cookies</h2>
+      <h2 class="section-title" style="text-align:left">Política de Cookies</h2>
       <p class="section-subtitle" style="text-align:left; max-width:900px">
-        Texto provisional. Recomendación: revisa con tu asesor legal antes de publicar.
+        Última actualización: Enero 2026
       </p>
 
       <div class="hr"></div>
 
-      <div class="card" style="padding:22px">
+      <article class="card legal" style="padding:22px">
+        <h3>1. ¿Qué son las cookies?</h3>
         <p>
-          Las cookies son pequeños archivos que se almacenan en tu dispositivo para mejorar la experiencia
-          del usuario, analizar el tráfico o personalizar contenido (si aplica).
+          Las cookies son pequeños archivos que se almacenan en tu dispositivo cuando navegas por un sitio web. Sirven para recordar información
+          sobre tu visita (por ejemplo, preferencias) y mejorar la experiencia de usuario.
         </p>
 
-        <div class="hr"></div>
+        <h3>2. ¿Qué cookies usa Wellqare?</h3>
+        <p>
+          En esta web, actualmente utilizamos un mecanismo básico para guardar tu elección sobre el consentimiento de cookies (aceptar o rechazar).
+          Esta preferencia puede guardarse mediante almacenamiento local del navegador (por ejemplo, localStorage).
+        </p>
 
-        <p><strong>Tipos habituales:</strong></p>
-        <ul style="color:#64748b; line-height:1.7; margin-top:8px">
-          <li><strong>Técnicas:</strong> necesarias para el funcionamiento.</li>
-          <li><strong>Analíticas:</strong> medición y estadísticas (GA4, etc.).</li>
-          <li><strong>Marketing:</strong> publicidad y remarketing (Meta Pixel, etc.).</li>
+        <div class="callout info">
+          <div class="callout-title">ℹ️ Importante</div>
+          <p>
+            Si más adelante activamos cookies analíticas (por ejemplo, Google Analytics 4) o de marketing (por ejemplo, Meta Pixel),
+            actualizaremos esta política y el banner de consentimiento.
+          </p>
+        </div>
+
+        <h3>3. Tipos de cookies que podrían utilizarse</h3>
+        <ul>
+          <li><strong>Técnicas o necesarias:</strong> permiten el funcionamiento básico del sitio.</li>
+          <li><strong>Preferencias:</strong> recuerdan ajustes (idioma, consentimiento, etc.).</li>
+          <li><strong>Analíticas:</strong> ayudan a medir el uso del sitio para mejorarlo (solo si las activas y aceptas).</li>
+          <li><strong>Marketing:</strong> ayudan a personalizar anuncios/remarketing (solo si las activas y aceptas).</li>
         </ul>
 
-        <div class="hr"></div>
-
+        <h3>4. ¿Cómo puedes gestionar tus cookies?</h3>
         <p>
-          Puedes aceptar o rechazar cookies desde el banner. Si más adelante instalas analítica/píxeles,
-          habrá que actualizar esta política con el listado de cookies y proveedores.
+          Puedes aceptar o rechazar desde el banner de cookies. También puedes eliminar o bloquear cookies desde la configuración de tu navegador.
+          Ten en cuenta que si desactivas cookies necesarias, algunas partes del sitio podrían no funcionar correctamente.
         </p>
-      </div>
+
+        <h3>5. Actualizaciones</h3>
+        <p>
+          Esta política puede actualizarse cuando cambiemos o incorporemos nuevas cookies. Publicaremos la versión actualizada en esta misma página.
+        </p>
+
+        <div class="contact-box">
+          <h4>Contacto</h4>
+          <p>Si tienes dudas sobre cookies o privacidad:</p>
+          <p style="margin-top:8px">📧 <a href="mailto:privacidad@wellqareapp.com">privacidad@wellqareapp.com</a></p>
+        </div>
+      </article>
     </div>
   </section>
+
+  <style>
+    .legal p { margin: 0 0 12px; }
+    .legal h3 { margin: 22px 0 10px; font-size: 20px; font-weight: 900; color: #0f172a; }
+    .legal ul { margin: 8px 0 14px 18px; color: #64748b; line-height: 1.7; }
+    .legal li { margin: 6px 0; }
+    .legal a { color: #1677ff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+    .callout { border-radius: 16px; padding: 16px; margin: 16px 0; border: 1px solid #e7efff; background: #f7fbff; }
+    .callout-title { font-weight: 1000; color:#0f172a; margin-bottom: 6px; }
+    .callout.info { background: #eff6ff; border-color: #bfdbfe; }
+
+    .contact-box { margin-top: 18px; border-radius: 16px; padding: 16px; background: #f8fafc; border: 1px solid #e2e8f0; text-align: center; }
+    .contact-box h4 { margin: 0 0 8px; font-size: 16px; }
+  </style>
 </Layout>
