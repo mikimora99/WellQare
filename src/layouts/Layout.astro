@@ -5,8 +5,8 @@ import Footer from "../components/Footer.astro";
 import CookieBanner from "../components/CookieBanner.astro";
 
 const {
-  title = "WellQare | Salud cerca de ti",
-  description = "Encuentra profesionales verificados cerca de ti. Reserva fácil, atención clara y una experiencia sencilla.",
+  title = "WellQare | Tu salud, a un clic",
+  description = "Conecta con profesionales de la salud verificados. Reserva citas, videoconsultas y accede a servicios cerca de ti.",
   ogImage = "/images/og.jpg",
 } = Astro.props;
 ---
@@ -17,9 +17,9 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index,follow" />
 
     <title>{title}</title>
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Open Graph -->
