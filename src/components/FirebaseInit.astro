@@ -1,0 +1,25 @@
+---
+import firebaseConfig from "../config/firebaseConfig";
+const cfg = JSON.stringify(firebaseConfig);
+---
+
+<script is:inline>
+  (async () => {
+    try {
+      // Cargamos Firebase App desde CDN (sin npm)
+      const mod = await import("https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js");
+      const { initializeApp, getApps } = mod;
+
+      const firebaseConfig = JSON.parse({JSON.stringify(cfg)});
+
+      if (!getApps().length) {
+        initializeApp(firebaseConfig);
+      }
+
+      // Solo log para confirmar que está “conectado”
+      console.log("[Wellqare] Firebase web init OK");
+    } catch (e) {
+      console.warn("[Wellqare] Firebase init failed", e);
+    }
+  })();
+</script>
